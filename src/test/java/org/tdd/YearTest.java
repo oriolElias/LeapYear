@@ -13,20 +13,25 @@ class YearTest {
     @Test
     void yearIsNotLeapYear(){
         year=new Year(1997);
-        assertEquals(year.isLeapYear(),false);
+        assertEquals(false,year.isLeapYear());
     }
 
     @Test
     void yearIsLeapYear(){
         year=new Year(1996);
-        assertEquals(year.isLeapYear(),true);
+        assertEquals(true,year.isLeapYear());
     }
 
     @Test
     void yearIsLeapYearDivisibleBy400(){
         year = new Year(1600);
-        assertEquals(year.isLeapYear(),true);
+        assertEquals(true,year.isLeapYear());
     }
 
+    @Test
+    void yearIsNotLeapYearIfNotDivisibleBy400(){
+        year = new Year(1800);
+        assertEquals(false,year.isLeapYear());
+    }
 
 }

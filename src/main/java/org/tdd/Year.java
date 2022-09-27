@@ -8,6 +8,6 @@ public class Year {
         this.year=year;
     }
     public Boolean isLeapYear() {
-        return year%4==0;
+        return (year % 4 == 0) && (year % 400 == 0);
     }
 }
