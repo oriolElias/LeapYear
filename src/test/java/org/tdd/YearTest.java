@@ -22,4 +22,11 @@ class YearTest {
         assertEquals(year.isLeapYear(),true);
     }
 
+    @Test
+    void yearIsLeapYearDivisibleBy400(){
+        year = new Year(1600);
+        assertEquals(year.isLeapYear(),true);
+    }
+
+
 }
